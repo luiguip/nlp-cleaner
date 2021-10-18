@@ -20,5 +20,8 @@ class StringFormatter:
     def replace_username_twitter(text, value=''):
         return re.sub(r'@[a-zA-Z0-9_]+', value,  text)
 
+    def replace_hashtag_twitter(text, value=''):
+        return re.sub(r'#[a-zA-Z0-9_]+', value, text)
+
     def remove_punctuation(text):
         return text.translate(str.maketrans('', '', string.punctuation))
